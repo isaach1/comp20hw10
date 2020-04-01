@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>API Fun</title>
+	<script>
+		function getData()
+		{
+			request = new XMLHttpRequest();
+			console.log("request created");
+
+			request.open("GET", "api.airvisual.com/v2/nearest_city?lat=51.48&lon=-0.25&key=27526e83-bcfa-4118-a44f-a984ab670007", true);
+
+			console.log("request opened");
+
+			request.onreadystatechange = function() {
+				console.log("readystatechange fired");
+				if (request.readyState == 4 && request.status == 200) {
+					result = request.responseText;
+					alert(result);
+				}
+			}
+
+			request.send();
+			console.log("request sent");
+		}
+	</script>
+<body onload="getData()">
+
+
+</body>
+</head>
+</html>
+
+links: https://www.iqair.com/dashboard/api
+https://api-docs.airvisual.com/?version=latest
