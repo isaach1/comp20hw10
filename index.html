@@ -18,6 +18,8 @@
 				if (request.readyState == 4 && request.status == 200) {
 					result = request.responseText;
 					alert(result);
+				} else if (request.status == 404) {
+					console.log(request.body);	
 				}
 			}
 
