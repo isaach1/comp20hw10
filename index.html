@@ -19,12 +19,11 @@
 					result = request.responseText;
 					var parsed = JSON.parse(result);
 					console.log(parsed.length);
-					// alert(result);
 					for (var i = 0; i < parsed.length; i++) {
 						document.getElementById("jokes").innerHTML += "Setup: " + parsed[i].setup + "<br>";
 						document.getElementById("jokes").innerHTML += "Punchline: " + parsed[i].punchline + "<br><br>";
 					}
-					document.getElementById("info").innerHTML = "This API was a joke generator that when queried can provide not 10 random jokes but can also provide jokes depending on what type is requested by the user. If provides these jokes in the format where there is an ID, and then a setup and a punchline, as I've displayed above.<br>I found this API on this site: <a href='https://github.com/public-apis/public-apis#environment'>Github Link</a> and it was listed under the Games & Comics section as Programming and General Jokes (<a href='https://github.com/15Dkatz/official_joke_api'>link here</a>).<br>It provides several options but I selected the random_ten option which requests 10 random jokes to be sent back in JSON format. Other options include obtaining jokes by different types, for example programming jokes.<br>This API could be helpful when designing a user friendly website, for example a client-facing site where jokes could be randomly selected and loaded onto the homepage to amuse the user when they first load the page. It could also be used by any budding comedians who are looking for new material.";
+					document.getElementById("info").innerHTML = "This API was a joke generator that when queried can provide not 10 random jokes but can also provide jokes depending on what type is requested by the user. If provides these jokes in the format where there is an ID, and then a setup and a punchline, as I've displayed below.<br>I found this API on this site: <a href='https://github.com/public-apis/public-apis#environment'>Github Link</a> and it was listed under the Games & Comics section as Programming and General Jokes (<a href='https://github.com/15Dkatz/official_joke_api'>link here</a>).<br>It provides several options but I selected the random_ten option which requests 10 random jokes to be sent back in JSON format. Other options include obtaining jokes by different types, for example programming jokes.<br>This API could be helpful when designing a user friendly website, for example a client-facing site where jokes could be randomly selected and loaded onto the homepage to amuse the user when they first load the page. It could also be used by any budding comedians who are looking for new material.<br><br><br>";
 				} else if (request.status == 404) {
 					console.log(request);	
 				}
