@@ -18,7 +18,7 @@
 				if (request.readyState == 4 && request.status == 200) {
 					result = request.responseText;
 					var parsed = JSON.parse(result);
-					// console.log(result.length);
+					console.log(parsed.length);
 					// alert(result);
 					for (var i = 0; i < parsed.length; i++) {
 						document.getElementById("jokes").innerHTML += "Setup: " + parsed[i].setup + "<br>";
