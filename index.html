@@ -17,7 +17,11 @@
 				console.log("readystatechange fired");
 				if (request.readyState == 4 && request.status == 200) {
 					result = request.responseText;
-					alert(result);
+					// alert(result);
+					for (var i = 0; i < responseText.length) {
+						document.getElementById("jokes").innerHTML = "Setup: " + responseText[i].setup + "<br>";
+						document.getElementById("jokes").innerHTML = "Punchline: " + responseText[i].punchline + "<br><br>";
+					}
 				} else if (request.status == 404) {
 					console.log(request);	
 				}
@@ -28,7 +32,7 @@
 		}
 	</script>
 <body onload="getData()">
-
+	<span id="jokes"><span>
 
 </body>
 </head>
