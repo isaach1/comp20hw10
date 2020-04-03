@@ -21,8 +21,8 @@
 					// console.log(result.length);
 					// alert(result);
 					for (var i = 0; i < parsed.length; i++) {
-						document.getElementById("jokes").innerHTML = "Setup: " + parsed[i].setup + "<br>";
-						document.getElementById("jokes").innerHTML = "Punchline: " + parsed[i].punchline + "<br><br>";
+						document.getElementById("jokes").innerHTML += "Setup: " + parsed[i].setup + "<br>";
+						document.getElementById("jokes").innerHTML += "Punchline: " + parsed[i].punchline + "<br><br>";
 					}
 				} else if (request.status == 404) {
 					console.log(request);	
@@ -39,6 +39,3 @@
 </body>
 </head>
 </html>
-
-links: https://www.iqair.com/dashboard/api
-https://api-docs.airvisual.com/?version=latest
